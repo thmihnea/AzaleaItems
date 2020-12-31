@@ -1,0 +1,9 @@
+name: AzaleaItems
+main: by.thmihnea.AzaleaItems
+version: 1.0.1
+description: Items for AzaleaMC
+author: thmihnea
+
+dependencies: NBTAPI
+
+api-version: 1.13
