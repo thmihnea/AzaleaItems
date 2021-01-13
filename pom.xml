@@ -31,13 +31,28 @@
             <url>https://repo.inventivetalent.org/content/groups/public/</url>
         </repository>
         <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+        <repository>
             <id>codemc-repo</id>
             <url>https://repo.codemc.org/repository/maven-public/</url>
             <layout>default</layout>
         </repository>
+        <repository>
+            <id>everything</id>
+            <url>http://repo.citizensnpcs.co/</url>
+        </repository>
     </repositories>
 
     <dependencies>
+        <dependency>
+            <groupId>net.citizensnpcs</groupId>
+            <artifactId>citizensapi</artifactId>
+            <version>2.0.27-SNAPSHOT</version>
+            <type>jar</type>
+            <scope>compile</scope>
+        </dependency>
         <!--This adds the Spigot API artifact to the build -->
         <dependency>
             <groupId>by.thmdev</groupId>
@@ -71,6 +86,12 @@
             <systemPath>${basedir}\src\libs\ArmorEquipEvent.jar</systemPath>
         </dependency>
         <dependency>
+            <groupId>com.github.MilkBowl</groupId>
+            <artifactId>VaultAPI</artifactId>
+            <version>1.7</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
             <groupId>ro.thmihnea</groupId>
             <artifactId>Factions</artifactId>
             <version>1.0.3-Stable</version>
@@ -87,7 +108,11 @@
             <artifactId>smart-invs</artifactId>
             <version>1.2.7</version>
         </dependency>
-        33
+        <dependency>
+            <groupId>de.tr7zw</groupId>
+            <artifactId>item-nbt-api-plugin</artifactId>
+            <version>2.7.1</version>
+        </dependency>
     </dependencies>
 
 

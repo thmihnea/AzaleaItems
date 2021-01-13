@@ -12,6 +12,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 import org.bukkit.scheduler.BukkitTask;
+import org.inventivetalent.particle.ParticleEffect;
 
 public class CrashingWavesTask implements Runnable {
 
@@ -31,8 +32,7 @@ public class CrashingWavesTask implements Runnable {
         for (int x = this.player.getLocation().getBlockX() - 2; x <= this.player.getLocation().getBlockX() + 3; x++)
             for (int z = this.player.getLocation().getBlockZ() - 2; z <= this.player.getLocation().getBlockZ() + 3; z++) {
                 Location location = new Location(this.player.getWorld(), x, this.player.getLocation().getBlockY(), z);
-                this.player.spawnParticle(XParticle.getParticle(Particle.WATER_SPLASH.name()), location, 2);
-                Bukkit.getOnlinePlayers().forEach(p -> p.spawnParticle(XParticle.getParticle(Particle.WATER_SPLASH.name()), location, 2));
+                ParticleEffect.WATER_SPLASH.send(Bukkit.getOnlinePlayers(), location, 0, 0, 0, 0, 1);
             }
         this.player.getNearbyEntities(5, 5, 5).forEach(entity -> {
             FPlayer self = FPlayers.getInstance().getByPlayer(this.player);
@@ -41,7 +41,7 @@ public class CrashingWavesTask implements Runnable {
                 if (Util.hasFullSet(player) && Util.getHalfSetIDs(player).contains(11)) return;
                 FPlayer near = FPlayers.getInstance().getByPlayer(player);
                 if (!self.getFaction().equals(near.getFaction())) {
-                    player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 40, Integer.MAX_VALUE));
+                    player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 40, 1));
                     player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 40, 0));
                 }
             }

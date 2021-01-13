@@ -4,7 +4,7 @@ import by.thmihnea.AzaleaItems;
 import by.thmihnea.Util;
 import by.thmihnea.api.ItemizedPlayer;
 import by.thmihnea.api.ItemizedPlayerManager;
-import by.thmihnea.items.AzaleaArmor;
+import by.thmihnea.item.AzaleaArmor;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerMoveEvent;

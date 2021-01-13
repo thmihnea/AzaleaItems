@@ -6,7 +6,6 @@ import by.thmihnea.AzaleaItems;
 import by.thmihnea.Util;
 import by.thmihnea.api.ItemizedPlayer;
 import by.thmihnea.api.ItemizedPlayerManager;
-import by.thmihnea.items.AzaleaArmor;
 import com.cryptomorin.xseries.XMaterial;
 import org.bukkit.Location;
 import org.bukkit.Material;

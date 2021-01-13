@@ -4,6 +4,7 @@ import by.thmihnea.AzaleaItems;
 import by.thmihnea.api.ItemizedPlayer;
 import by.thmihnea.api.ItemizedPlayerManager;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitTask;
 
@@ -28,6 +29,10 @@ public class Cooldown implements Runnable {
         if (isOver()) {
             clear();
         }
+    }
+
+    public void sendCooldownMessage() {
+        this.player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&cThis ability is on cooldown for another " + this.timeLeftInSeconds() + " seconds!"));
     }
 
     public void resetTime() {

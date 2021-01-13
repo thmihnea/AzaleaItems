@@ -3,7 +3,7 @@ package by.thmihnea.listeners;
 import by.thmdev.api.AttributeManager;
 import by.thmdev.api.AttributedPlayer;
 import by.thmihnea.Util;
-import by.thmihnea.items.AzaleaArmor;
+import by.thmihnea.item.AzaleaArmor;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;

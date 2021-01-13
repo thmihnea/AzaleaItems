@@ -5,7 +5,7 @@ import by.thmdev.api.AttributedPlayer;
 import by.thmihnea.Util;
 import by.thmihnea.api.ItemizedPlayer;
 import by.thmihnea.api.ItemizedPlayerManager;
-import by.thmihnea.items.SetBonus;
+import by.thmihnea.item.SetBonus;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;

@@ -12,5 +12,18 @@ public enum CooldownType {
     RESOLUTE_STANCE,
     STALEMATE,
     QUEENS_GAMBIT,
-    STURDY
+    STURDY,
+    HOMERUN,
+    PICKPOCKET,
+    HEAL,
+    GREATER_GOOD,
+    SHURIKEN,
+    RIDER,
+    BLIND,
+    SNEAK,
+    ENTANGLEMENT,
+    HIDDEN_SHADOWS,
+    METEOR_SHOWER,
+    JUSTICE,
+    CYCLICAL_CUTS
 }

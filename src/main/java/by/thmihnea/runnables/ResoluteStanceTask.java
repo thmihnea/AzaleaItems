@@ -8,7 +8,7 @@ import by.thmihnea.api.ItemizedPlayer;
 import by.thmihnea.api.ItemizedPlayerManager;
 import by.thmihnea.cooldown.Cooldown;
 import by.thmihnea.cooldown.CooldownType;
-import by.thmihnea.items.SetBonus;
+import by.thmihnea.item.SetBonus;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.potion.PotionEffect;

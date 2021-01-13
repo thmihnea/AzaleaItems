@@ -7,7 +7,7 @@ import by.thmihnea.api.ItemizedPlayer;
 import by.thmihnea.api.ItemizedPlayerManager;
 import by.thmihnea.cooldown.Cooldown;
 import by.thmihnea.cooldown.CooldownType;
-import by.thmihnea.items.AzaleaArmor;
+import by.thmihnea.item.AzaleaArmor;
 import com.cryptomorin.xseries.XSound;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;

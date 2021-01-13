@@ -2,14 +2,11 @@ package by.thmihnea.api;
 
 import by.thmihnea.cooldown.Cooldown;
 import by.thmihnea.cooldown.CooldownType;
-import by.thmihnea.items.SetBonus;
+import by.thmihnea.item.SetBonus;
 import by.thmihnea.runnables.*;
 import org.bukkit.entity.Player;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class ItemizedPlayer {
 
@@ -23,6 +20,7 @@ public class ItemizedPlayer {
     private boolean naturesDefense;
     private boolean isGazed;
     private boolean rooted;
+    private boolean pickpocket;
     private CrashingWavesTask crashingWaves;
     private TectonicShiftTask tectonicShift;
     private FourWindsTask fourWinds;
@@ -30,7 +28,7 @@ public class ItemizedPlayer {
     private Integer naturesGuardianManaAmount;
     private Integer galeValleyCritChanceAmount;
     private Integer naturesDefenseAmount;
-    private List<Cooldown> cooldowns = new ArrayList<>();
+    private Set<Cooldown> cooldowns = new HashSet<>();
     private Map<SetBonus, Integer> boostedStats = new HashMap<>();
 
     {
@@ -53,6 +51,7 @@ public class ItemizedPlayer {
         this.hasFourWinds = false;
         this.isGazed = false;
         this.rooted = false;
+        this.pickpocket = false;
         this.naturesDefense = false;
         this.naturesGuardianManaAmount = 0;
         this.galeValleyCritChanceAmount = 0;
@@ -220,7 +219,15 @@ public class ItemizedPlayer {
         return this.player;
     }
 
-    public List<Cooldown> getCooldowns() {
+    public boolean hasPickpocketActive() {
+        return this.pickpocket;
+    }
+
+    public void setPickpocket(boolean pickpocket) {
+        this.pickpocket = pickpocket;
+    }
+
+    public Set<Cooldown> getCooldowns() {
         return this.cooldowns;
     }
 

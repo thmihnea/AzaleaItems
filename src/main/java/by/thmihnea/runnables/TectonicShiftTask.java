@@ -11,6 +11,7 @@ import org.bukkit.Particle;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.scheduler.BukkitTask;
+import org.inventivetalent.particle.ParticleEffect;
 
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
@@ -39,7 +40,7 @@ public class TectonicShiftTask implements Runnable {
                 if (Util.hasFullSet(player) && Util.getHalfSetIDs(player).contains(11)) return;
                 FPlayer near = FPlayers.getInstance().getByPlayer(player);
                 if (!near.getFaction().equals(self.getFaction())) {
-                    int chance = 7;
+                    int chance = 90;
                     int hash = random.nextInt(100);
                     if (hash <= chance) {
                         this.displayParticles();
@@ -59,8 +60,7 @@ public class TectonicShiftTask implements Runnable {
         for (int x = this.player.getLocation().getBlockX() - 2; x <= this.player.getLocation().getBlockX() + 3; x++) {
             for (int z = this.player.getLocation().getBlockZ() - 2; z <= this.player.getLocation().getBlockZ() + 3; z++) {
                 Location location = new Location(this.player.getWorld(), x, this.player.getLocation().getBlockY(), z);
-                this.player.spawnParticle(XParticle.getParticle(Particle.SMOKE_LARGE.name()), location, 5);
-                Bukkit.getOnlinePlayers().forEach(p -> p.spawnParticle(XParticle.getParticle(Particle.SMOKE_LARGE.name()), location, 2));
+                ParticleEffect.SMOKE_LARGE.send(Bukkit.getOnlinePlayers(), location, 0, 0, 0, 0, 1);
             }
         }
     }

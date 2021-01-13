@@ -4,7 +4,7 @@ import by.thmihnea.Util;
 import by.thmihnea.api.ItemizedPlayer;
 import by.thmihnea.api.ItemizedPlayerManager;
 import by.thmihnea.cooldown.CooldownType;
-import by.thmihnea.items.SetBonus;
+import by.thmihnea.item.SetBonus;
 import com.massivecraft.factions.FPlayer;
 import com.massivecraft.factions.FPlayers;
 import org.bukkit.ChatColor;
