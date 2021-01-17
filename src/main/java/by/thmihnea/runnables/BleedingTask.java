@@ -27,6 +27,10 @@ public class BleedingTask implements Runnable {
 
     @Override
     public void run() {
+        if (!(this.player.isOnline())) {
+            this.clear();
+            return;
+        }
         if (isOver()) {
             clear();
         }

@@ -22,6 +22,10 @@ public class ThePowerOfTwoTask implements Runnable {
 
     @Override
     public void run() {
+        if (!(this.player.isOnline())) {
+            this.clear();
+            return;
+        }
         if (!Util.getHalfSetIDs(this.player).contains(18)) {
             return;
         }

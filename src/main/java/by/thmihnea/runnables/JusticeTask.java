@@ -24,6 +24,10 @@ public class JusticeTask implements Runnable {
 
     @Override
     public void run() {
+        if (!(this.player.isOnline())) {
+            this.clear();
+            return;
+        }
         ParticleEffect.VILLAGER_HAPPY.send(Bukkit.getOnlinePlayers(), this.player.getLocation(), 0, 0, 0, 1, 0);
         if (!this.player.isOnGround()) return;
         ParticleEffect.EXPLOSION_HUGE.send(Bukkit.getOnlinePlayers(), this.player.getLocation(), 0, 0, 0, 1, 0);

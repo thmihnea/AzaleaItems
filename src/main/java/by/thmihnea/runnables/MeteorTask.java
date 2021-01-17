@@ -31,6 +31,10 @@ public class MeteorTask implements Runnable {
 
     @Override
     public void run() {
+        if (!(this.player.isOnline())) {
+            this.clear();
+            return;
+        }
         ParticleEffect.FLAME.send(Bukkit.getOnlinePlayers(), this.block.getLocation(), 0, 0, 0, 1, 0);
         double y = this.block.getVelocity().getY();
         this.block.setVelocity(genVec(this.block.getLocation(), player.getLocation()).setY(y));

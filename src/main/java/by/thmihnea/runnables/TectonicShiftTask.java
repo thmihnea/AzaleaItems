@@ -28,6 +28,10 @@ public class TectonicShiftTask implements Runnable {
 
     @Override
     public void run() {
+        if (!(this.player.isOnline())) {
+            this.clear();
+            return;
+        }
         if (!Util.hasFullSet(this.player)) {
             this.clear();
             return;

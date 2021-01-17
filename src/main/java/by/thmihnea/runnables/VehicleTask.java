@@ -29,6 +29,10 @@ public class VehicleTask implements Runnable {
 
     @Override
     public void run() {
+        if (!(this.player.isOnline())) {
+            this.clear();
+            return;
+        }
         if (!this.horse.isOnGround()) return;
         Player player = this.player;
         AttributedPlayer attributedPlayer = AttributeManager.getAttributedPlayer(player);
